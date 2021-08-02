@@ -1,0 +1,8 @@
+#Docker Spotify plugin will work with only Lowercase of ApplicationName
+
+#To run it
+docker run -p 9000:8080 deep/dockerexample:0.0.1-SNAPSHOT
+
+#Default it will run on 8080 even if we specify server.port in property file. To run it on server.port, we
+need to specify:
+docker run -e SERVER_PORT=9000 -p 9000:9000 deep/dockerexample:0.0.1-SNAPSHOT
